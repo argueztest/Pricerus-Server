@@ -30,10 +30,6 @@ public class ProductsController {
 		return productsService.getAllProducts();
 	}
 
-//	@RequestMapping("/topics/{topicId}/courses/{id}")
-//	public Course getCourse(@PathVariable String id){
-//		return productsService.getCourse(id);
-//	}
 
 	@RequestMapping(method=RequestMethod.POST, value="/users/{userId}/product")
 	public void addProduct(@RequestBody Products product,@PathVariable Integer userId){

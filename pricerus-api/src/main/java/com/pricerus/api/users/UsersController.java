@@ -19,16 +19,16 @@ public class UsersController {
 	private UsersService usersService;
 
 @RequestMapping("/users")
-public List<Users> getAllTopics(){
+public List<Users> getAllUsers(){
 	
-	return usersService.getAllTopics();
+	return usersService.getAllUsers();
 
 }
 
-//	@RequestMapping("/topics/{id}")
-//	public Topic getTopic(@PathVariable String id) {
-//		return topicService.getTopic(id);
-//	}
+	@RequestMapping("/users/{id}")
+	public Users getUser(@PathVariable Integer id) {
+		return usersService.getUser(id);
+	}
 
 @RequestMapping(method=RequestMethod.POST, value="/users")
 public void addUser(@RequestBody Users user){

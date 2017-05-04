@@ -33,10 +33,14 @@ public class UsersService {
 		
 	}
 
-	public List<Users> getAllTopics() {
+	public List<Users> getAllUsers() {
 		List<Users> topics = new ArrayList<>();
 		usersRepository.findAll().forEach(topics::add);
 		 return topics;
+	}
+
+	public Users getUser(Integer id) {
+		return usersRepository.findOne(id);
 	}
 
 
